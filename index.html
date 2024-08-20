@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-adsense-account" content="ca-pub-9779857910334509">
+    <title>Oyun Touch</title>
+    <link rel="stylesheet" href="index.css">
+    <script>
+        function redirectBasedOnDevice() {
+            // Kullanıcı Ajanını Al
+            const userAgent = navigator.userAgent;
+
+            // Cihazın Mobil Olup Olmadığını Kontrol Edin
+            if (/Mobi|Android|iPhone|iPad|iPod/i.test(userAgent)) {
+                // Mobil cihaz ise mobil için tasarlanmış HTML sayfasına yönlendir
+                window.location.href = "mobile.html";
+            } else {
+                // Masaüstü cihaz ise masaüstü için tasarlanmış HTML sayfasına yönlendir
+                window.location.href = "desktop.html";
+            }
+        }
+        
+        // Sayfa yüklendiğinde fonksiyonu çalıştır
+        window.onload = redirectBasedOnDevice;
+    </script>
+</head>
+<body>
+</body>
+</html>

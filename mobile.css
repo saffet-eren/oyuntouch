@@ -1,0 +1,293 @@
+* {
+    margin:  0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+.project {
+    width: 100%;
+    height: 100%;
+    background: #000000;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #121212;
+    border-bottom: 1px solid #333;
+    flex-wrap: nowrap; /* Öğelerin aynı satırda kalmasını sağlar */
+    overflow-x: auto;  /* Öğelerin sığmadığı durumlarda yatay kaydırma çubuğunu etkinleştirir */
+    white-space: nowrap; /* Öğelerin satır atlamasını engeller */
+}
+
+.menu ul li {
+    list-style: none;
+    margin: 0 10px; /* Mobil cihazlarda bile öğelerin arasında biraz boşluk bırakır */
+    color: #b2b1b1;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s;
+    flex-shrink: 0; /* Öğelerin boyutunu sabit tutar */
+}
+
+.menu ul li:hover {
+    color: #19d7f8;
+}
+
+.menu ul li.logo img {
+    width: 40px;
+    margin-top: -5px;
+}
+
+.banner {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.app-text {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.app-text h2 {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.play-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.play-btn-inner {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #19d7f8;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.play-btn-inner i {
+    font-size: 18px;
+}
+
+small {
+    color: #19d7f8;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.altmenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #000;
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+    z-index: 1000;
+    padding: 5px 0;
+}
+
+.altmenu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+}
+
+.altmenu a:hover {
+    color: #19d7f8;
+}
+
+.bildirimler:hover .altmenu {
+    display: block;
+}
+
+.social-buttons {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.social-buttons a {
+    color: #ffffff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.social-buttons:hover {
+    background: linear-gradient(45deg, #515BD4, #8134AF, #DD2A7B, #F58529);
+}
+
+/* Mobil uyumluluk ayarları */
+@media (max-width: 600px) {
+    .banner {
+        padding: 10px;
+    }
+    .app-text h2 {
+        font-size: 18px;
+    }
+    .social-buttons {
+        flex-direction: row; /* Mobil cihazlarda butonların yatayda kalmasını sağlar */
+    }
+    .social-buttons a {
+        font-size: 16px;
+    }
+}
+
+/* Tıklanabilir tüm öğeler için uygulama */
+li, a, button, .play-btn, .social-buttons a, .altmenu a {
+    -webkit-tap-highlight-color: transparent; /* Webkit tabanlı tarayıcılarda dokunma rengini kaldırır */
+    outline: none; /* Tıklandığında oluşan çerçeveyi kaldırır */
+    -webkit-user-select: none; /* Seçimi devre dışı bırakır */
+    -webkit-touch-callout: none; /* Uzun basıldığında çıkan seçenekleri kaldırır */
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: background-color 0.3s, color 0.3s; /* Renk değişimleri için geçiş efekti */
+}
+
+/* Eğer hover veya active efekti varsa onları da düzenleyin */
+li:hover, a:hover, button:hover, .play-btn:hover, .social-buttons a:hover, .altmenu a:hover,
+li:active, a:active, button:active, .play-btn:active, .social-buttons a:active, .altmenu a:active {
+    background-color: inherit; /* Eğer arka plan rengi değiştiriliyorsa, mevcut rengi koruyun */
+    color: inherit; /* Eğer yazı rengi değiştiriliyorsa, mevcut rengi koruyun */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+.project {
+    width: 100%;
+    height: auto;
+    background: #000000;
+}
+
+.bildirimler:hover .altmenu {
+    display: block;
+}
+
+.altmenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #000;
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+    z-index: 1000;
+}
+
+.altmenu a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+}
+
+.altmenu a:hover {
+    color: #19d7f8;
+}
+
+.dikkat p {
+    text-align: center;
+    font-size: 20px;
+}
+
+.game-list {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.game-item {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease-in-out;
+    margin: 20px;
+}
+
+.game-item:hover {
+    background-color: #f0f0f0;
+}
+
+.game-image img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.game-details {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.game-details h3 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    color: #007bff;
+}
+
+.game-details p {
+    margin: 0;
+    font-size: 16px;
+    color: #666;
+}
+
+.game-html {
+    text-decoration: none;
+}
+
+.menu ul a{
+    list-style: none;
+    margin: 0 10px;
+    color: #b2b1b1;
+    cursor:pointer;
+    position: relative;
+    text-decoration: none;
+}
+.bildirimler {
+    white-space: nowrap;
+}
