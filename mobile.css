@@ -23,18 +23,18 @@ body {
     background-color: #121212;
     border-bottom: 1px solid #333;
     flex-wrap: nowrap; /* Öğelerin aynı satırda kalmasını sağlar */
-    overflow-x: auto;  /* Öğelerin sığmadığı durumlarda yatay kaydırma çubuğunu etkinleştirir */
+    overflow-x: hidden;  /* Öğelerin sığmadığı durumlarda yatay kaydırma çubuğunu etkinleştirir */    
     white-space: nowrap; /* Öğelerin satır atlamasını engeller */
 }
 
 .menu ul li {
     list-style: none;
-    margin: 0 10px; /* Mobil cihazlarda bile öğelerin arasında biraz boşluk bırakır */
+    margin: 0 5px; /* Mobil cihazlarda bile öğelerin arasında biraz boşluk bırakır */
     color: #b2b1b1;
     cursor: pointer;
     position: relative;
     transition: color 0.3s;
-    flex-shrink: 0; /* Öğelerin boyutunu sabit tutar */
+    flex-shrink: 1; /* Öğelerin boyutunu sabit tutar */ /* Minimum genişlik sağlar */
 }
 
 .menu ul li:hover {
